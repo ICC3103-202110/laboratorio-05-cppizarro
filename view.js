@@ -4,15 +4,20 @@ const inquirer = require('inquirer')
 //const { get } = require('node:http')
 
 function getTitle(){
-    return chalk.green(
+    return chalk.cyanBright(
         figlet.textSync(
-            'App',
+            'Tip Calculator App',
             {
-                horizontalLayout: 'default',
-                font: 'Nancyj-Underlined'
+                horizontalLayout: 'fitted',
+                font: 'Nancyj-Underlined',
+                width: 80
             }
         )
     )
+}
+
+function getTable(){
+    return
 }
 
 /*
@@ -55,21 +60,23 @@ function listForm(model){
         choices: choices
     })
 }
+*/
 
 // Get actual console view
 function view(model){
     return {
-        title: getTitle(),
-        table: getTable(model)
+        title: getTitle()
+        //table: getTable(model)
     }
 }
 
+
+
 module.exports = {
-    view, 
-    inputForm,
-    listForm
+    view
+    //inputForm,
+    //listForm
 }
-*/
 
 title = getTitle()
-console.log(title)
+//console.log(title)
