@@ -16,7 +16,23 @@ function getTitle(){
     )
 }
 
-function getTable(){
+function getTable(model){
+    const {billAmount} = model
+    const {percentage} = model
+    const {tip} = model
+    const {totalAmount} = model
+
+    return [
+        {
+            'Bill Amount':billAmount,
+            'Tip (%)':percentage,
+            'Tip':tip,
+            'Total':totalAmount
+        }
+    ]
+}
+
+function inputForm(){
     return
 }
 

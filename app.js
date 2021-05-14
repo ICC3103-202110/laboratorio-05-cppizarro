@@ -4,8 +4,3 @@ const {view} = require('./view')
 
 
 console.log(title)
-
-function app(algo){
-
-
-}

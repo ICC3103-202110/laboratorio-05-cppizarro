@@ -3,7 +3,7 @@ function tipCalc(percent, amount){
     return tipValue
 }
 
-function totalAmount(percent, amount){
+function total(percent, amount){
     total = amount + tipCalc(percent, amount)
     return total
 }
