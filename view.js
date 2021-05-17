@@ -9,7 +9,7 @@ function getTitle(){
             {
                 horizontalLayout: 'full',
                 font: 'Nancyj-Underlined',
-                width: 120
+                width: 80
             }
         )
     )
@@ -50,15 +50,6 @@ function getInput(model){
             default: percentage
         }
     ])
-}
-
-
-// Get actual console view
-function view(model){
-    return {
-        title: getTitle()
-        //table: getTable(model)
-    }
 }
 
 module.exports = {

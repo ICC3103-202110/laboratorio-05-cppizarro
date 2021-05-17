@@ -4,7 +4,7 @@ function tipCalc(percent, amount){
 }
 
 function total(percent, amount){
-    tot = amount + tipCalc(percent, amount)
+    tot = + amount + tipCalc(percent, amount)
     return tot
 }
 
