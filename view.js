@@ -56,5 +56,4 @@ module.exports = {
     getTitle,
     getTable,
     getInput
-    //listForm
 }
