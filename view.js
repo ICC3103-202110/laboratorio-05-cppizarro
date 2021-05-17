@@ -1,32 +1,32 @@
 const figlet = require('figlet')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
-//const { get } = require('node:http')
 
 function getTitle(){
     return chalk.cyanBright(
         figlet.textSync(
             'Tip Calculator App',
             {
-                horizontalLayout: 'fitted',
-                font: 'Nancyj-Underlined',
-                width: 80
+                horizontalLayout: 'full',
+                font: 'roman'/*'Nancyj-Underlined'*/,
+                width: 120
             }
         )
     )
 }
 
 function getTable(model){
+    
     const {billAmount} = model
     const {percentage} = model
     const {tip} = model
     const {totalAmount} = model
-
+    
     return [
         {
-            'Bill Amount':billAmount,
-            'Tip (%)':percentage,
-            'Tip':tip,
+            'Bill Amount': billAmount,
+            'Tip (%)': percentage,
+            'Tip': tip,
             'Total':totalAmount
         }
     ]
@@ -36,47 +36,6 @@ function inputForm(){
     return
 }
 
-/*
-function getTable(model){
-    const {counter} = model
-    return [
-        {Counter: counter},
-    ]
-}
-
-function inputForm(model){
-    const {input} = model
-    const message = 'Increase or decrease?'
-    return inquirer.prompt([
-        {
-            name: 'input',
-            type: 'input',
-            message: message,
-            default: input,
-            validate: function(value){
-                if(value === '+' || value === '-'){
-                    return true
-                } else {
-                    return 'Enter + or -'
-                }
-            }
-        }
-    ])
-}
-
-function listForm(model){
-    const {input} = model
-    const message = 'Increase or decrease?'
-    const choices = ['+', '-']
-    return inquirer.prompt({
-        name: 'input',
-        type: 'list',
-        message: message,
-        default: input,
-        choices: choices
-    })
-}
-*/
 
 // Get actual console view
 function view(model){
@@ -89,10 +48,8 @@ function view(model){
 
 
 module.exports = {
-    view
+    getTitle,
+    getTable
     //inputForm,
     //listForm
 }
-
-title = getTitle()
-//console.log(title)

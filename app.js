@@ -1,6 +1,9 @@
-//const {initModel} = require('./model')
+const {initModel} = require('./model')
 //const {update} = require('./update')
-const {view} = require('./view')
+const {getTitle, getTable} = require('./view')
+const {printTable} = require('console-table-printer')
 
 
-console.log(title)
+console.log(getTitle())
+printTable(getTable(initModel))
+
