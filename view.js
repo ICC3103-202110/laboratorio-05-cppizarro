@@ -8,7 +8,7 @@ function getTitle(){
             'Tip Calculator App',
             {
                 horizontalLayout: 'full',
-                font: 'Nancyj-Underlined',
+                font: 'digital',
                 width: 80
             }
         )

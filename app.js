@@ -6,7 +6,7 @@ const { up } = require('inquirer/lib/utils/readline')
 
 async function app(model){
     while(true){
-        const title = getTitle()
+       const title = getTitle()
         const table = getTable(model)
 
         console.clear()
