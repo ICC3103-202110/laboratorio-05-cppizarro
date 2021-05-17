@@ -8,7 +8,7 @@ function getTitle(){
             'Tip Calculator App',
             {
                 horizontalLayout: 'full',
-                font: 'roman'/*'Nancyj-Underlined'*/,
+                font: 'Nancyj-Underlined',
                 width: 120
             }
         )
@@ -32,8 +32,24 @@ function getTable(model){
     ]
 }
 
-function inputForm(){
-    return
+function getInput(model){
+    const {billAmount} = model
+    const {percentage} = model
+    return inquirer.prompt([
+        {
+            name: 'billAmount',
+            type: 'input',
+            message: 'Bill Amount?',
+            default: billAmount
+        },
+
+        {
+            name: 'percentage',
+            type: 'input',
+            message: 'Tip(%)?',
+            default: percentage
+        }
+    ])
 }
 
 
@@ -45,11 +61,9 @@ function view(model){
     }
 }
 
-
-
 module.exports = {
     getTitle,
-    getTable
-    //inputForm,
+    getTable,
+    getInput
     //listForm
 }

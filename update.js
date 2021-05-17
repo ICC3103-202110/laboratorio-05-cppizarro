@@ -4,20 +4,21 @@ function tipCalc(percent, amount){
 }
 
 function total(percent, amount){
-    total = amount + tipCalc(percent, amount)
-    return total
+    tot = amount + tipCalc(percent, amount)
+    return tot
 }
 
-
 function update(model, percent, bill){
+    
     const tipAmount = tipCalc(percent, bill)
     const totalBill = total(percent, bill)
+
     return {
         ...model,
-        billAmount = bill,
-        percentage = percent,
-        tip = tipAmount,
-        totalAmount = totalBill
+        billAmount: bill,
+        percentage:  percent,
+        tip: tipAmount,
+        totalAmount: totalBill
 
     }
 }
